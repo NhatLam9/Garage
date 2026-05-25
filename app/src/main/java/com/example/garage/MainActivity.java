@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
             navService.setOnClickListener(v -> {
                 Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
                 startActivity(intent);
-                overridePendingTransition(0, 0); // Tắt hiệu ứng trượt để chuyển tab mượt hơn
-                finish(); // Đóng trang hiện tại
+                overridePendingTransition(0, 0); 
+                finish(); 
             });
         }
     }
