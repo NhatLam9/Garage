@@ -12,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Garage">
         <activity
-            android:name=".SplashConnectActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
+            android:name=".ServiceActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

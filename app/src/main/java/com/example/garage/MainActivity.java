@@ -1,6 +1,7 @@
 package com.example.garage;
 
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -18,16 +19,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
-
+        // 1. Cài đặt giao diện Dark Mode
+        if (getSupportActionBar() != null) getSupportActionBar().hide();
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.bg_main));
 
         setContentView(R.layout.activity_main);
 
+        // 2. Chạy hiệu ứng vòng tua máy
         rpmGauge = findViewById(R.id.rpm_gauge);
         tvRpmValue = findViewById(R.id.tv_rpm_value);
 
@@ -39,14 +39,22 @@ public class MainActivity extends AppCompatActivity {
 
             animator.addUpdateListener(animation -> {
                 float currentRpm = (float) animation.getAnimatedValue();
-
                 rpmGauge.setRpm(currentRpm);
-
                 String formattedRpm = String.format(Locale.US, "%,.0f", currentRpm).replace(",", ".");
                 tvRpmValue.setText(formattedRpm);
             });
-
             animator.start();
+        }
+
+        // 3. SỰ KIỆN CLlCK: Chuyển sang trang Service
+        TextView navService = findViewById(R.id.nav_service);
+        if (navService != null) {
+            navService.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0); // Tắt hiệu ứng trượt để chuyển tab mượt hơn
+                finish(); // Đóng trang hiện tại
+            });
         }
     }
 }
