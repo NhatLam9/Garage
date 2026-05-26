@@ -32,5 +32,15 @@ public class ServiceActivity extends AppCompatActivity {
                 finish(); // Đóng trang Service
             });
         }
+
+        TextView navTrips = findViewById(R.id.nav_trips);
+        if (navTrips != null) {
+            navTrips.setOnClickListener(v -> {
+                Intent intent = new Intent(ServiceActivity.this, TripsActivity.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0); // Tắt hiệu ứng trượt
+                finish(); // Đóng trang hiện tại
+            });
+        }
     }
 }

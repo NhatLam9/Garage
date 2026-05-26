@@ -46,13 +46,24 @@ public class MainActivity extends AppCompatActivity {
             animator.start();
         }
 
-        // 3. SỰ KIỆN CLlCK: Chuyển sang trang Service
+        // 3. SỰ KIỆN CLICK: Chuyển sang trang Service
         TextView navService = findViewById(R.id.nav_service);
         if (navService != null) {
             navService.setOnClickListener(v -> {
                 Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
                 startActivity(intent);
-                overridePendingTransition(0, 0); // Tắt hiệu ứng trượt để chuyển tab mượt hơn
+                overridePendingTransition(0, 0); // Tắt hiệu ứng trượt
+                finish(); // Đóng trang hiện tại
+            });
+        }
+
+        // 4. SỰ KIỆN CLICK: Chuyển sang trang Trips
+        TextView navTrips = findViewById(R.id.nav_trips);
+        if (navTrips != null) {
+            navTrips.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, TripsActivity.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0); // Tắt hiệu ứng trượt
                 finish(); // Đóng trang hiện tại
             });
         }

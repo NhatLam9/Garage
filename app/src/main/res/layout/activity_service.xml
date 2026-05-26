@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:text="CONNECTED"
+                    android:text="● CONNECTED"
                     android:textColor="@color/colorPrimary"
                     android:textSize="11sp"
                     android:paddingHorizontal="10dp"
@@ -290,6 +290,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/nav_docs"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -299,6 +300,7 @@
             android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/nav_trips"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
