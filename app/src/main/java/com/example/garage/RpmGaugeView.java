@@ -53,19 +53,19 @@ public class RpmGaugeView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        // Vẽ viền xám: Bắt đầu từ góc 135 độ, kéo dài 270 độ (Để chừa khoảng trống ở dưới)
+        // Vẽ viền xám
         canvas.drawArc(rectF, 135f, 270f, false, trackPaint);
 
-        // Vẽ viền cam: Tính toán góc theo % RPM hiện tại
+        // Vẽ viền cam
         float sweepAngle = (currentRpm / maxRpm) * 270f;
         canvas.drawArc(rectF, 135f, sweepAngle, false, progressPaint);
     }
 
-    // Hàm này để MainActivity gọi vào khi muốn đổi số RPM
+    //  MainActivity gọi vào khi muốn đổi số RPM
     public void setRpm(float rpm) {
         if (rpm > maxRpm) rpm = maxRpm;
         if (rpm < 0) rpm = 0;
         this.currentRpm = rpm;
-        invalidate(); // Bắt buộc vẽ lại màn hình
+        invalidate(); 
     }
 }
