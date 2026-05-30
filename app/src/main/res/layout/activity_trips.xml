@@ -19,32 +19,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MyGarage"
-                android:textColor="@color/colorPrimary"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:layout_centerVertical="true"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:text="● CONNECTED"
-                android:textColor="@color/colorPrimary"
-                android:textSize="11sp"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="4dp"
-                android:background="@drawable/bg_rounded_outline_orange" />
-        </RelativeLayout>
+        <include layout="@layout/layout_header" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -63,12 +38,6 @@
                     android:id="@+id/map"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="#B3000000" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="wrap_content"
@@ -96,24 +65,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="16dp"
                     android:paddingHorizontal="24dp"
-                    android:baselineAligned="false">
-
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AVG\nSPD" android:textColor="@color/status_blue" android:textSize="11sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="68" android:textColor="@color/text_white" android:textSize="24sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MPH" android:textColor="@color/text_white" android:textSize="11sp"/>
-                    </LinearLayout>
-
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center_vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MAX\nLEAN" android:textColor="@color/colorPrimary" android:textSize="11sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="42°" android:textColor="@color/text_white" android:textSize="24sp" android:textStyle="bold"/>
-                    </LinearLayout>
-
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:orientation="vertical" android:gravity="center_vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MAX RPM" android:textColor="@color/colorPrimary" android:textSize="11sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="11.4K" android:textColor="@color/text_white" android:textSize="24sp" android:textStyle="bold"/>
-                    </LinearLayout>
-                </LinearLayout>
+                    android:baselineAligned="false"/>
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
 

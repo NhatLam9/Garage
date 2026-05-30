@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">Garage</string>
+    <string name="app_name">MyGarage</string>
+    <string name="connected">CONNECTED</string>
+
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_service">Service</string>
+    <string name="nav_docs">Docs</string>
+    <string name="nav_trips">Trips</string>
+
+    <string name="tech_search_title">TECHNICAL SEARCH</string>
+    <string name="tech_search_hint">SEARCH COMPONENTS, SPECS, OR DIAGRAMS.</string>
+    <string name="ref_library">Reference Library</string>
+    <string name="electrical_diagrams">Electrical Diagrams</string>
+    <string name="full_schematics">FULL SCHEMATICS</string>
+    <string name="torque_specs">Torque Specs</string>
+    <string name="critical_fasteners">CRITICAL FASTENERS</string>
+    <string name="service_intervals">Service Intervals</string>
+    <string name="maintenance_milestones">MAINTENANCE MILESTONES</string>
+    <string name="diy_diary">DIY Diary</string>
+    <string name="view_all_logs">VIEW ALL LOGS</string>
 </resources>

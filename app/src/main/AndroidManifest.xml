@@ -24,6 +24,9 @@
             android:name=".TripsActivity"
             android:exported="false" />
         <activity
+            android:name=".DocsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

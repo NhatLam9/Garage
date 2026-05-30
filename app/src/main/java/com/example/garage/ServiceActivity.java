@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-public class ServiceActivity extends AppCompatActivity {
+public class ServiceActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class ServiceActivity extends AppCompatActivity {
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.bg_main));
 
         setContentView(R.layout.activity_service);
+        setupCommonUI(R.id.nav_service);
 
         // 2. SỰ KIỆN CLICK: Quay lại trang Dashboard
         TextView navDashboard = findViewById(R.id.nav_dashboard);

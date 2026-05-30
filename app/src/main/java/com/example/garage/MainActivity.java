@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private RpmGaugeView rpmGauge;
     private TextView tvRpmValue;
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.bg_main));
 
         setContentView(R.layout.activity_main);
+        setupCommonUI(R.id.nav_dashboard);
 
         // 2. Chạy hiệu ứng vòng tua máy
         rpmGauge = findViewById(R.id.rpm_gauge);

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Trạm Xe</string>
+    <string name="connected">ĐÃ KẾT NỐI</string>
+
+    <string name="nav_dashboard">Tổng quan</string>
+    <string name="nav_service">Bảo dưỡng</string>
+    <string name="nav_docs">Tài liệu</string>
+    <string name="nav_trips">Hành trình</string>
+
+    <string name="tech_search_title">TÌM KIẾM KỸ THUẬT</string>
+    <string name="tech_search_hint">TÌM LINH KIỆN, THÔNG SỐ HOẶC SƠ ĐỒ.</string>
+    <string name="ref_library">Thư viện Tra cứu</string>
+    <string name="electrical_diagrams">Sơ đồ điện</string>
+    <string name="full_schematics">TOÀN BỘ SƠ ĐỒ</string>
+    <string name="torque_specs">Lực siết ốc</string>
+    <string name="critical_fasteners">CHI TIẾT QUAN TRỌNG</string>
+    <string name="service_intervals">Chu kỳ bảo dưỡng</string>
+    <string name="maintenance_milestones">CÁC MỐC QUAN TRỌNG</string>
+    <string name="diy_diary">Nhật ký tự sửa</string>
+    <string name="view_all_logs">XEM TẤT CẢ</string>
+</resources>
