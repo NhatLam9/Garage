@@ -18,4 +18,118 @@
     <string name="maintenance_milestones">MAINTENANCE MILESTONES</string>
     <string name="diy_diary">DIY Diary</string>
     <string name="view_all_logs">VIEW ALL LOGS</string>
+
+    <string name="login_welcome">Welcome Back</string>
+    <string name="login_email_hint">EMAIL OR PHONE</string>
+    <string name="login_password_hint">PASSWORD</string>
+    <string name="login_btn">LOG IN ⚡</string>
+    <string name="login_biometric">BIOMETRIC LOGIN</string>
+    <string name="login_forgot_password">FORGOT PASSWORD?</string>
+
+    <string name="connect_title">OBDII SCANNING</string>
+    <string name="connect_progress">Connecting...</string>
+    <string name="connect_searching">SEARCHING FOR OBDII</string>
+
+    <string name="dash_engine_speed">ENGINE SPEED</string>
+    <string name="dash_rpm_unit">RPM</string>
+    <string name="dash_gear">GEAR</string>
+    <string name="dash_speed">SPEED</string>
+    <string name="dash_mode">MODE</string>
+    <string name="dash_system_health">System Health</string>
+    <string name="dash_no_faults">✓ No Fault Codes Detected</string>
+    <string name="dash_obd_status">OBDII Status</string>
+    <string name="dash_last_scan">Last Scan</string>
+    <string name="dash_thermal_power">THERMAL &amp; POWER</string>
+    <string name="dash_engine_temp">Engine Temp</string>
+    <string name="dash_coolant_temp">Coolant Temp</string>
+    <string name="dash_battery">Battery Voltage</string>
+    <string name="dash_fuel_range">FUEL RANGE</string>
+    <string name="dash_oil_life">OIL LIFE</string>
+    <string name="dash_tire_psi">TIRE PSI (F/R)</string>
+    <string name="dash_odo">ODO</string>
+
+    <string name="trip_gallery_title">GALLERY</string>
+    <string name="trip_gallery_subtitle">Trip Photos</string>
+    <string name="trip_start_new">Start New Trip</string>
+
+    <string name="service_fluid_telemetry">CORE FLUID TELEMETRY</string>
+    <string name="service_coolant">COOLANT</string>
+    <string name="service_oil_life">OIL LIFE</string>
+    <string name="service_overall_temp">TEMPERATURE</string>
+
+    <string name="service_next_predict">PREDICTED NEXT SERVICE</string>
+
+    <string name="service_critical_components">Critical Components</string>
+
+    <string name="service_engine_diag">Engine Diagnostics</string>
+    <string name="service_engine_desc">No OBD-II Fault Codes Detected</string>
+
+    <string name="service_oil_pressure">Oil Pressure</string>
+    <string name="service_oil_desc">45 PSI | Normal Viscosity</string>
+
+    <string name="service_battery_health">Battery Health</string>
+    <string name="service_battery_desc">14.4V (Charging) | 12.6V (Rest)</string>
+
+    <string name="service_abs">Anti-lock Braking System (ABS)</string>
+    <string name="service_abs_desc">Wheel Speed Sensors Synced</string>
+
+    <string name="service_tpms">Tire Pressure (TPMS)</string>
+    <string name="service_tpms_desc">F: 36 PSI | R: 42 PSI (Balanced)</string>
+
+    <string name="service_cooling">Cooling System</string>
+    <string name="service_cooling_desc">Stable Flow | No Overheating Risk</string>
+
+    <string name="service_tc">Traction Control (TC)</string>
+    <string name="service_tc_desc">Grip Sensors Active &amp; Ready</string>
+
+    <string name="service_air_intake">Engine Air Intake</string>
+    <string name="service_air_intake_desc">100% Airflow Capacity</string>
+
+    <string name="status_optimal">OPTIMAL</string>
+    <string name="status_perfect">PERFECT</string>
+    <string name="status_good">GOOD</string>
+    <string name="status_active">ACTIVE</string>
+    <string name="status_stable">STABLE</string>
+    <string name="status_ready">READY</string>
+    <string name="status_clean">CLEAN</string>
+
+    <string name="docs_sys_focus">SYSTEM FOCUS</string>
+    <string name="docs_dohc_title">DOHC Engine Block</string>
+    <string name="docs_dohc_desc">Interactive exploded-view of the S1000RR valvetrain assembly.</string>
+
+    <string name="docs_rec_tire_label">RECOMMENDED: TIRES</string>
+    <string name="docs_rec_tire_title">Pirelli Diablo Rosso IV</string>
+    <string name="docs_rec_tire_desc">Maximum grip in all weather conditions. Ideal setup for street and track.</string>
+
+    <string name="docs_rec_oil_label">RECOMMENDED: LUBRICATION</string>
+    <string name="docs_rec_oil_title">Motul 300V 10W40</string>
+    <string name="docs_rec_oil_desc">100% Synthetic Ester Core. High heat resistance for smooth shifting at high RPMs.</string>
+
+    <string name="docs_rec_air_label">RECOMMENDED: AIR INTAKE</string>
+    <string name="docs_rec_air_title">K&amp;N High-Flow Air Filter</string>
+    <string name="docs_rec_air_desc">Increases airflow and improves engine power. Washable and reusable for life.</string>
+
+    <string name="docs_rec_brake_label">RECOMMENDED: BRAKES</string>
+    <string name="docs_rec_brake_title">Brembo Sintered Brake Pads</string>
+    <string name="docs_rec_brake_desc">High-temperature resistant alloy, anti-brake fade, and minimizes rotor wear.</string>
+
+    <string name="docs_rec_spark_label">RECOMMENDED: IGNITION</string>
+    <string name="docs_rec_spark_title">NGK Laser Iridium Spark Plugs</string>
+    <string name="docs_rec_spark_desc">Ultra-fine, focused ignition point. Clean combustion and durable life over 40,000 KM.</string>
+
+    <string name="docs_rec_coolant_label">RECOMMENDED: COOLING</string>
+    <string name="docs_rec_coolant_title">Engine Ice Coolant</string>
+    <string name="docs_rec_coolant_desc">Rapidly reduces engine temperature. Boil-over and scale protection for maximum radiator life.</string>
+
+    <string name="log_completed">COMPLETED</string>
+    <string name="log_oil_title">Full Synthetic\nOil Change</string>
+    <string name="log_oil_desc">Motul 300V 10W40</string>
+    <string name="log_coolant_title">Coolant Flush</string>
+    <string name="log_coolant_desc">Engine Ice Coolant</string>
+    <string name="log_brake_title">Brake Pad Replacement</string>
+    <string name="log_brake_desc">Rear Brembo Sintered Pads</string>
+
+    <string name="trip_track_day">Track Day 05/24</string>
+    <string name="trip_coast_run">COAST RUN</string>
+    <string name="trip_new_album">NEW ALBUM • 12 ITEMS</string>
 </resources>

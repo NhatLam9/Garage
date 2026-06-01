@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Trạm Xe</string>
+    <string name="app_name">MyGarage</string>
     <string name="connected">ĐÃ KẾT NỐI</string>
 
     <string name="nav_dashboard">Tổng quan</string>
@@ -7,15 +7,129 @@
     <string name="nav_docs">Tài liệu</string>
     <string name="nav_trips">Hành trình</string>
 
-    <string name="tech_search_title">TÌM KIẾM KỸ THUẬT</string>
-    <string name="tech_search_hint">TÌM LINH KIỆN, THÔNG SỐ HOẶC SƠ ĐỒ.</string>
-    <string name="ref_library">Thư viện Tra cứu</string>
-    <string name="electrical_diagrams">Sơ đồ điện</string>
-    <string name="full_schematics">TOÀN BỘ SƠ ĐỒ</string>
-    <string name="torque_specs">Lực siết ốc</string>
-    <string name="critical_fasteners">CHI TIẾT QUAN TRỌNG</string>
-    <string name="service_intervals">Chu kỳ bảo dưỡng</string>
-    <string name="maintenance_milestones">CÁC MỐC QUAN TRỌNG</string>
-    <string name="diy_diary">Nhật ký tự sửa</string>
+    <string name="tech_search_title">TRA CỨU KỸ THUẬT</string>
+    <string name="tech_search_hint">TÌM KIẾM LINH KIỆN, THÔNG SỐ HOẶC SƠ ĐỒ.</string>
+    <string name="ref_library">Thư Viện Tham Khảo</string>
+    <string name="electrical_diagrams">Sơ Đồ Mạch Điện</string>
+    <string name="full_schematics">SƠ ĐỒ CHI TIẾT</string>
+    <string name="torque_specs">Thông Số </string>
+    <string name="critical_fasteners">CÁC CHỐT QUAN TRỌNG</string>
+    <string name="service_intervals">Lịch Trình Bảo Dưỡng</string>
+    <string name="maintenance_milestones">CÁC CỘT MỐC QUAN TRỌNG</string>
+    <string name="diy_diary">Nhật Ký Cá Nhân</string>
     <string name="view_all_logs">XEM TẤT CẢ</string>
+
+    <string name="login_welcome">Chào Mừng Trở Lại</string>
+    <string name="login_email_hint">EMAIL HOẶC SỐ ĐIỆN THOẠI</string>
+    <string name="login_password_hint">MẬT KHẨU</string>
+    <string name="login_btn">ĐĂNG NHẬP ⚡</string>
+    <string name="login_biometric">ĐĂNG NHẬP SINH TRẮC HỌC</string>
+    <string name="login_forgot_password">QUÊN MẬT KHẨU?</string>
+
+    <string name="connect_title">OBDII SCANNING</string>
+    <string name="connect_progress">Connecting...</string>
+    <string name="connect_searching">SEARCHING FOR OBDII</string>
+
+    <string name="dash_engine_speed">VÒNG TUA ĐỘNG CƠ</string>
+    <string name="dash_rpm_unit">VÒNG/PHÚT</string>
+    <string name="dash_gear">CẤP SỐ</string>
+    <string name="dash_speed">TỐC ĐỘ</string>
+    <string name="dash_mode">CHẾ ĐỘ LÁI</string>
+    <string name="dash_system_health">Tình Trạng Hệ Thống</string>
+    <string name="dash_no_faults">✓ Không Phát Hiện Mã Lỗi Nào</string>
+    <string name="dash_obd_status">Trạng Thái OBDII</string>
+    <string name="dash_last_scan">Lần Quét Cuối</string>
+    <string name="dash_thermal_power">NHIỆT ĐỘ &amp; ĐIỆN NĂNG</string>
+    <string name="dash_engine_temp">Nhiệt Độ Động Cơ</string>
+    <string name="dash_coolant_temp">Nước Làm Mát</string>
+    <string name="dash_battery">Điện Áp Ắc Quy</string>
+    <string name="dash_fuel_range">XĂNG CÒN ĐI ĐƯỢC</string>
+    <string name="dash_oil_life">TUỔI THỌ NHỚT</string>
+    <string name="dash_tire_psi">ÁP SUẤT LỐP (T/S)</string>
+    <string name="dash_odo">TỔNG QUÃNG ĐƯỜNG</string>
+
+    <string name="trip_gallery_title">BỘ SƯU TẬP</string>
+    <string name="trip_gallery_subtitle">Ảnh Hành Trình</string>
+    <string name="trip_start_new">Bắt Đầu Hành Trình</string>
+
+    <string name="service_fluid_telemetry">THÔNG SỐ DUNG DỊCH ĐỘNG CƠ</string>
+    <string name="service_coolant">NƯỚC LÀM MÁT</string>
+    <string name="service_oil_life">TUỔI THỌ NHỚT</string>
+    <string name="service_overall_temp">NHIỆT ĐỘ TỔNG THỂ</string>
+
+    <string name="service_next_predict">DỰ KIẾN BẢO DƯỠNG LẦN TỚI</string>
+
+    <string name="service_critical_components">Tình Trạng Hệ Thống</string>
+
+    <string name="service_engine_diag">Chẩn Đoán Động Cơ</string>
+    <string name="service_engine_desc">Không Phát Hiện Mã Lỗi OBD-II</string>
+
+    <string name="service_oil_pressure">Áp Suất Nhớt</string>
+    <string name="service_oil_desc">45 PSI | Độ Nhớt Bình Thường</string>
+
+    <string name="service_battery_health">Tình Trạng Ắc Quy</string>
+    <string name="service_battery_desc">14.4V (Đang sạc) | 12.6V (Nghỉ)</string>
+
+    <string name="service_abs">Chống Bó Cứng Phanh (ABS)</string>
+    <string name="service_abs_desc">Đồng Bộ Cảm Biến Bánh Xe Ổn Định</string>
+
+    <string name="service_tpms">Áp Suất Lốp (TPMS)</string>
+    <string name="service_tpms_desc">Trước: 36 PSI | Sau: 42 PSI (Cân bằng)</string>
+
+    <string name="service_cooling">Hệ Thống Làm Mát</string>
+    <string name="service_cooling_desc">Dòng Chảy Ổn Định | Không Quá Nhiệt</string>
+
+    <string name="service_tc">Kiểm Soát Lực Kéo (TC)</string>
+    <string name="service_tc_desc">Cảm Biến Bám Đường Sẵn Sàng</string>
+
+    <string name="service_air_intake">Hệ Thống Hút Gió Động Cơ</string>
+    <string name="service_air_intake_desc">Đạt 100% Lưu Lượng Gió</string>
+
+    <string name="status_optimal">TỐI ƯU</string>
+    <string name="status_perfect">HOÀN HẢO</string>
+    <string name="status_good">TỐT</string>
+    <string name="status_active">HOẠT ĐỘNG</string>
+    <string name="status_stable">ỔN ĐỊNH</string>
+    <string name="status_ready">SẴN SÀNG</string>
+    <string name="status_clean">SẠCH</string>
+
+    <string name="docs_sys_focus">TẬP TRUNG HỆ THỐNG</string>
+    <string name="docs_dohc_title">Cụm Động Cơ DOHC</string>
+    <string name="docs_dohc_desc">Bản vẽ bóc tách tương tác cụm van động cơ S1000RR.</string>
+
+    <string name="docs_rec_tire_label">KHUYÊN DÙNG: LỐP XE</string>
+    <string name="docs_rec_tire_title">Pirelli Diablo Rosso IV</string>
+    <string name="docs_rec_tire_desc">Bám đường tối đa trên mọi điều kiện thời tiết. Trang bị lý tưởng cho đường phố và track.</string>
+
+    <string name="docs_rec_oil_label">KHUYÊN DÙNG: BÔI TRƠN</string>
+    <string name="docs_rec_oil_title">Motul 300V 10W40</string>
+    <string name="docs_rec_oil_desc">Tổng hợp 100% Ester Core. Chịu nhiệt cực tốt, giúp sang số mượt mà ở dải vòng tua cao.</string>
+
+    <string name="docs_rec_air_label">KHUYÊN DÙNG: NẠP KHÍ</string>
+    <string name="docs_rec_air_title">Lọc Gió Thể Thao K&amp;N</string>
+    <string name="docs_rec_air_desc">Tăng lưu lượng khí nạp, cải thiện công suất máy. Có thể vệ sinh và tái sử dụng trọn đời.</string>
+
+    <string name="docs_rec_brake_label">KHUYÊN DÙNG: PHANH</string>
+    <string name="docs_rec_brake_title">Bố Phanh Brembo Sinter</string>
+    <string name="docs_rec_brake_desc">Hợp kim chịu nhiệt độ cao, chống mất phanh (fade) và giảm thiểu sự mài mòn đĩa phanh.</string>
+
+    <string name="docs_rec_spark_label">KHUYÊN DÙNG: ĐIỆN &amp; LỬA</string>
+    <string name="docs_rec_spark_title">Bugi NGK Iridium Laser</string>
+    <string name="docs_rec_spark_desc">Điểm đánh lửa cực nhỏ và tập trung. Đốt sạch nhiên liệu, tuổi thọ bền bỉ trên 40,000 KM.</string>
+
+    <string name="docs_rec_coolant_label">KHUYÊN DÙNG: TẢN NHIỆT</string>
+    <string name="docs_rec_coolant_title">Nước Làm Mát Engine Ice</string>
+    <string name="docs_rec_coolant_desc">Hạ nhiệt độ động cơ cực nhanh. Chống sôi, chống đóng cặn và bảo vệ hệ thống két nước tối đa.</string>
+
+    <string name="log_completed">ĐÃ HOÀN THÀNH</string>
+    <string name="log_oil_title">Thay Nhớt\nTổng Hợp Toàn Phần</string>
+    <string name="log_oil_desc">Motul 300V 10W40</string>
+    <string name="log_coolant_title">Thay Dung Dịch Làm Mát</string>
+    <string name="log_coolant_desc">Engine Ice Coolant</string>
+    <string name="log_brake_title">Thay Má Phanh</string>
+    <string name="log_brake_desc">Má phanh sau Brembo Sinter</string>
+
+    <string name="trip_track_day">Chạy Track 05/24</string>
+    <string name="trip_coast_run">CUNG ĐƯỜNG BIỂN</string>
+    <string name="trip_new_album">ALBUM MỚI • 12 ẢNH</string>
 </resources>

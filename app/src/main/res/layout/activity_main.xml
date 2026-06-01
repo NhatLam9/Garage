@@ -43,7 +43,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="ENGINE SPEED"
+                        android:text="@string/dash_engine_speed"
                         android:textColor="@color/text_gray"
                         android:textSize="12sp" />
 
@@ -79,7 +79,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="RPM"
+                                android:text="@string/dash_rpm_unit"
                                 android:textColor="@color/text_gray"
                                 android:textSize="14sp" />
                         </LinearLayout>
@@ -99,7 +99,7 @@
                             android:orientation="vertical"
                             android:gravity="center">
                             <TextView
-                                android:text="GEAR"
+                                android:text="@string/dash_gear"
                                 android:textColor="@color/text_gray"
                                 android:textSize="12sp"
                                 android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
                             android:orientation="vertical"
                             android:gravity="center">
                             <TextView
-                                android:text="SPEED"
+                                android:text="@string/dash_speed"
                                 android:textColor="@color/text_gray"
                                 android:textSize="12sp"
                                 android:layout_width="wrap_content"
@@ -142,7 +142,7 @@
                             android:orientation="vertical"
                             android:gravity="center">
                             <TextView
-                                android:text="MODE"
+                                android:text="@string/dash_mode"
                                 android:textColor="@color/text_gray"
                                 android:textSize="12sp"
                                 android:layout_width="wrap_content"
@@ -184,7 +184,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="System Health"
+                            android:text="@string/dash_system_health"
                             android:textColor="@color/text_white"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -193,7 +193,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="✓ No Fault Codes Detected"
+                            android:text="@string/dash_no_faults"
                             android:textColor="@color/status_green"
                             android:textSize="12sp" />
 
@@ -213,14 +213,14 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="OBDII Status"
+                                    android:text="@string/dash_obd_status"
                                     android:textColor="@color/text_gray"
                                     android:textSize="12sp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="ACTIVE"
+                                    android:text="@string/connected"
                                     android:textColor="@color/status_blue"
                                     android:textSize="14sp"
                                     android:textStyle="bold" />
@@ -235,14 +235,14 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Last Scan"
+                                    android:text="@string/dash_last_scan"
                                     android:textColor="@color/text_gray"
                                     android:textSize="12sp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="2 mins ago"
+                                    android:text="Just now"
                                     android:textColor="@color/text_white"
                                     android:textSize="14sp" />
                             </LinearLayout>
@@ -274,7 +274,7 @@
                     android:padding="20dp">
 
                     <TextView
-                        android:text="THERMAL &amp; POWER"
+                        android:text="@string/dash_thermal_power"
                         android:textColor="@color/text_gray"
                         android:textSize="12sp"
                         android:layout_width="wrap_content"
@@ -293,13 +293,13 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
                             <TextView
-                                android:text="Engine Temp"
+                                android:text="@string/dash_engine_temp"
                                 android:textColor="@color/text_gray"
                                 android:textSize="12sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:text="95°c"
+                                android:text="90°C"
                                 android:textColor="@color/text_white"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -307,9 +307,9 @@
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
                         <TextView
-                            android:text="----"
+                            android:text="@string/status_optimal"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="24sp"
+                            android:textSize="18sp"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -327,13 +327,13 @@
                             android:layout_weight="1"
                             android:orientation="vertical">
                             <TextView
-                                android:text="Coolant Temp"
+                                android:text="@string/dash_coolant_temp"
                                 android:textColor="@color/text_gray"
                                 android:textSize="12sp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                             <TextView
-                                android:text="88°c"
+                                android:text="90°C"
                                 android:textColor="@color/text_white"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
@@ -341,9 +341,10 @@
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
                         <TextView
-                            android:text="---"
+                            android:text="@string/status_stable"
                             android:textColor="@color/status_blue"
-                            android:textSize="24sp" android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
@@ -353,13 +354,13 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <TextView
-                            android:text="Battery Voltage"
+                            android:text="@string/dash_battery"
                             android:textColor="@color/text_gray"
                             android:textSize="12sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <TextView
-                            android:text="14.2v"
+                            android:text="14.4V"
                             android:textColor="@color/text_white"
                             android:textSize="18sp"
                             android:textStyle="bold"
@@ -407,13 +408,13 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:text="FUEL RANGE"
+                                    android:text="@string/dash_fuel_range"
                                     android:textColor="@color/text_gray"
                                     android:textSize="12sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                                 <TextView
-                                    android:text="185 KM"
+                                    android:text="450 KM"
                                     android:textColor="@color/text_white"
                                     android:textSize="16sp"
                                     android:textStyle="bold"
@@ -426,13 +427,13 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:text="OIL LIFE"
+                                    android:text="@string/dash_oil_life"
                                     android:textColor="@color/text_gray"
                                     android:textSize="12sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                                 <TextView
-                                    android:text="82%"
+                                    android:text="100%"
                                     android:textColor="@color/colorPrimary"
                                     android:textSize="16sp"
                                     android:textStyle="bold"
@@ -451,13 +452,13 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:text="TIRE PSI (F/R)"
+                                    android:text="@string/dash_tire_psi"
                                     android:textColor="@color/text_gray"
                                     android:textSize="12sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                                 <TextView
-                                    android:text="36 / 42"
+                                    android:text="36 / 42 PSI"
                                     android:textColor="@color/text_white"
                                     android:textSize="16sp"
                                     android:textStyle="bold"
@@ -470,7 +471,7 @@
                                 android:layout_weight="1"
                                 android:orientation="vertical">
                                 <TextView
-                                    android:text="ODO"
+                                    android:text="@string/dash_odo"
                                     android:textColor="@color/text_gray"
                                     android:textSize="12sp"
                                     android:layout_width="wrap_content"

@@ -36,10 +36,10 @@ public class TripsActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // 1. Cấu hình OSMDroid (Phải gọi trước setContentView)
+        // 1. Cấu hình OSMDroid
         Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this));
 
-        // 2. Cấu hình Giao diện Dark Mode cho thanh trạng thái (Status Bar)
+        // 2. Cấu hình Giao diện Dark Mode cho thanh trạng thái
         if (getSupportActionBar() != null) getSupportActionBar().hide();
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -55,7 +55,7 @@ public class TripsActivity extends BaseActivity {
         map.setNestedScrollingEnabled(false);
         map.getController().setZoom(15.0);
 
-        // Nhuộm đen bản đồ bằng ColorMatrix (Cách xử lý rất thông minh)
+        // Nhuộm đen bản đồ bằng ColorMatrix
         ColorMatrix inverseMatrix = new ColorMatrix(new float[] {
                 -1.0f, 0.0f, 0.0f, 0.0f, 255f,
                 0.0f, -1.0f, 0.0f, 0.0f, 255f,
@@ -64,7 +64,7 @@ public class TripsActivity extends BaseActivity {
         });
         map.getOverlayManager().getTilesOverlay().setColorFilter(new ColorMatrixColorFilter(inverseMatrix));
 
-        // 4. Vẽ lộ trình ảo (Đã đổi sang tọa độ tuyến đường ven biển để test GPS khớp với vị trí thực tế)
+        // 4. Vẽ lộ trình ảo
         List<GeoPoint> geoPoints = new ArrayList<>();
         geoPoints.add(new GeoPoint(12.242, 109.197));
         geoPoints.add(new GeoPoint(12.246, 109.198));
@@ -122,7 +122,7 @@ public class TripsActivity extends BaseActivity {
         }
     }
 
-    // Quản lý vòng đời của bản đồ (Tránh rò rỉ bộ nhớ và crash app)
+    // Quản lý vòng đời của bản đồ
     @Override
     public void onResume() {
         super.onResume();

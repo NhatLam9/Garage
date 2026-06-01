@@ -14,7 +14,7 @@ public class RpmGaugeView extends View {
     private RectF rectF;
 
     // Cài đặt thông số RPM
-    private float maxRpm = 12000f; // Vòng tua tối đa
+    private float maxRpm = 12000f;
     private float currentRpm = 0f;
 
     public RpmGaugeView(Context context, AttributeSet attrs) {
@@ -25,10 +25,10 @@ public class RpmGaugeView extends View {
     private void init() {
         // Cọ vẽ nền xám (track)
         trackPaint = new Paint();
-        trackPaint.setColor(Color.parseColor("#333333")); // Màu xám tối
+        trackPaint.setColor(Color.parseColor("#333333"));
         trackPaint.setStyle(Paint.Style.STROKE);
-        trackPaint.setStrokeWidth(25f); // Độ dày của viền
-        trackPaint.setStrokeCap(Paint.Cap.ROUND); // Bo tròn 2 đầu
+        trackPaint.setStrokeWidth(25f);
+        trackPaint.setStrokeCap(Paint.Cap.ROUND);
         trackPaint.setAntiAlias(true); // Chống răng cưa giúp viền mịn
 
         // Cọ vẽ mức RPM hiện tại (màu cam)

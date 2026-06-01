@@ -13,8 +13,6 @@ public class MainActivity extends BaseActivity {
 
     private RpmGaugeView rpmGauge;
     private TextView tvRpmValue;
-
-    // --- BIẾN CHO CHẾ ĐỘ LÁI ---
     private TextView tvMode;
     private String[] drivingModes = {"RAIN", "CITY", "SPORT", "SPORT+", "RACE"};
     private int currentModeIndex = 4;
