@@ -40,7 +40,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CORE FLUID TELEMETRY"
+                        android:text="THÔNG SỐ DUNG DỊCH ĐỘNG CƠ"
                         android:textColor="@color/text_gray"
                         android:textSize="12sp"
                         android:layout_marginBottom="20dp"/>
@@ -80,7 +80,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/progress_coolant"
                                 android:layout_centerHorizontal="true"
-                                android:text="COOLANT"
+                                android:text="NƯỚC LÀM MÁT"
                                 android:textColor="@color/status_blue"
                                 android:textSize="12sp"
                                 android:textStyle="bold"
@@ -116,7 +116,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/progress_oil"
                                 android:layout_centerHorizontal="true"
-                                android:text="OIL LIFE"
+                                android:text="TUỔI THỌ NHỚT"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="12sp"
                                 android:textStyle="bold"
@@ -124,48 +124,88 @@
                         </RelativeLayout>
                     </LinearLayout>
 
-                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/stroke_color" android:layout_marginVertical="16dp"/>
-
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TEMPERATURE" android:textColor="@color/text_gray" android:textSize="10sp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="92°C" android:textColor="@color/text_white" android:textSize="16sp" android:textStyle="bold"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/stroke_color"
+                        android:layout_marginVertical="16dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:text="NHIỆT ĐỘ TỔNG THỂ"
+                        android:textColor="@color/text_gray"
+                        android:textSize="10sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="92°C"
+                        android:textColor="@color/text_white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="16dp"
                 android:layout_marginBottom="24dp">
-
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView android:text="PREDICTED NEXT SERVICE" android:textColor="#80FFFFFF" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:text="OCT 24, 2024" android:textColor="@color/bg_main" android:textSize="24sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginVertical="4dp"/>
-                        <TextView android:text="~ 12,450 KM" android:textColor="#80FFFFFF" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                    </LinearLayout>
+                    android:layout_height="match_parent">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:src="@mipmap/ic_launcher"
-                        android:contentDescription="Lịch bảo dưỡng" />
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/bmwbike" android:layout_alignTop="@+id/content_layout"
+                        android:layout_alignBottom="@+id/content_layout" />
+
+                    <RelativeLayout
+                        android:id="@+id/content_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_glass"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:text="DỰ KIẾN BẢO DƯỠNG LẦN TỚI"
+                                android:textColor="#E6FFFFFF"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:text="1 THG 6, 2026"
+                                android:textColor="@color/text_white"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="4dp"/>
+
+                            <TextView
+                                android:text="~ 12,450 KM"
+                                android:textColor="#B3FFFFFF"
+                                android:textSize="12sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Critical Components"
+                android:text="Tình Trạng Hệ Thống"
                 android:textColor="@color/text_white"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -180,13 +220,43 @@
                 app:strokeWidth="1dp"
                 android:layout_marginBottom="12dp">
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
-                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@mipmap/ic_launcher" android:contentDescription="Icon"/>
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="16dp">
-                        <TextView android:text="Anti-lock Braking System (ABS)" android:textColor="@color/text_white" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:text="Front &amp; Rear Sensors Active" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/engine"
+                        android:contentDescription="Icon"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+                        <TextView
+                            android:text="Chẩn Đoán Động Cơ"
+                            android:textColor="@color/text_white"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="Không Phát Hiện Mã Lỗi OBD-II"
+                            android:textColor="@color/text_gray"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
                     </LinearLayout>
-                    <TextView android:text="OPTIMAL" android:textColor="@color/status_green" android:textSize="12sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="TỐI ƯU"
+                        android:textColor="@color/status_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -199,13 +269,271 @@
                 app:strokeWidth="1dp"
                 android:layout_marginBottom="12dp">
 
-                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
-                    <ImageView android:layout_width="60dp" android:layout_height="30dp" android:src="@mipmap/ic_launcher" android:contentDescription="Icon Tires"/>
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="16dp">
-                        <TextView android:text="Traction Control (TC)" android:textColor="@color/text_white" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:text="Intervention Level: 2/5" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/oilpressure"
+                        android:contentDescription="Icon"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+                        <TextView
+                            android:text="Áp Suất Nhớt"
+                            android:textColor="@color/text_white"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="45 PSI | Độ Nhớt Bình Thường"
+                            android:textColor="@color/text_gray"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
                     </LinearLayout>
-                    <TextView android:text="ACTIVE" android:textColor="@color/status_green" android:textSize="12sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="HOÀN HẢO"
+                        android:textColor="@color/status_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/stroke_color"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/battery"
+                        android:contentDescription="Icon"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+                        <TextView
+                            android:text="Tình Trạng Ắc Quy"
+                            android:textColor="@color/text_white"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="14.4V (Đang sạc) | 12.6V (Nghỉ)"
+                            android:textColor="@color/text_gray"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <TextView
+                        android:text="TỐT"
+                        android:textColor="@color/status_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/stroke_color"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/abs"
+                        android:contentDescription="Icon"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+                        <TextView
+                            android:text="Chống Bó Cứng Phanh (ABS)"
+                            android:textColor="@color/text_white"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="Đồng Bộ Cảm Biến Bánh Xe Ổn Định"
+                            android:textColor="@color/text_gray"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <TextView
+                        android:text="HOẠT ĐỘNG"
+                        android:textColor="@color/status_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/stroke_color"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/tire"
+                        android:contentDescription="Icon"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+                        <TextView
+                            android:text="Áp Suất Lốp (TPMS)"
+                            android:textColor="@color/text_white"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="Trước: 36 PSI | Sau: 42 PSI (Cân bằng)"
+                            android:textColor="@color/text_gray"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <TextView
+                        android:text="TỐI ƯU"
+                        android:textColor="@color/status_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/stroke_color"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/temperaturecoolant"
+                        android:contentDescription="Icon"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+                        <TextView
+                            android:text="Hệ Thống Làm Mát"
+                            android:textColor="@color/text_white"
+                            android:textSize="14sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="Dòng Chảy Ổn Định | Không Quá Nhiệt"
+                            android:textColor="@color/text_gray"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <TextView
+                        android:text="ỔN ĐỊNH"
+                        android:textColor="@color/status_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/stroke_color"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/tractioncontroll"
+                        android:contentDescription="Icon"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="16dp">
+                        <TextView
+                            android:text="Kiểm Soát Lực Kéo (TC)" android:textColor="@color/text_white" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="Cảm Biến Bám Đường Sẵn Sàng" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <TextView android:text="SẴN SÀNG" android:textColor="@color/status_green" android:textSize="12sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -219,14 +547,27 @@
                 android:layout_marginBottom="24dp">
 
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
-                    <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@mipmap/ic_launcher" android:contentDescription="Icon"/>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/airfilter"
+                        android:contentDescription="Icon"/>
                     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="16dp">
-                        <TextView android:text="Air Filter" android:textColor="@color/text_white" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                        <TextView android:text="Intake Pressure: 98%" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="Hệ Thống Hút Gió Động Cơ" android:textColor="@color/text_white" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:text="Đạt 100% Lưu Lượng Gió" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                     </LinearLayout>
-                    <TextView android:text="CHECK @ 10K" android:textColor="@color/colorPrimary" android:textSize="12sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="SẠCH" android:textColor="@color/status_green" android:textSize="12sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/stroke_color"
+                app:strokeWidth="1dp"
+                android:layout_marginBottom="32dp"/>
 
         </LinearLayout>
     </ScrollView>

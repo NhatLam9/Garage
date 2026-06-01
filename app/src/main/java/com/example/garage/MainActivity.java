@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import java.util.Locale;
 
@@ -14,6 +13,11 @@ public class MainActivity extends BaseActivity {
 
     private RpmGaugeView rpmGauge;
     private TextView tvRpmValue;
+
+    // --- BIẾN CHO CHẾ ĐỘ LÁI ---
+    private TextView tvMode;
+    private String[] drivingModes = {"RAIN", "CITY", "SPORT", "SPORT+", "RACE"};
+    private int currentModeIndex = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +51,19 @@ public class MainActivity extends BaseActivity {
             animator.start();
         }
 
-        // 3. SỰ KIỆN CLlCK: Chuyển sang trang Service
+        // --- SỰ KIỆN CLICK ĐỂ ĐỔI MODE ---
+        tvMode = findViewById(R.id.tvMode);
+        if (tvMode != null) {
+            tvMode.setOnClickListener(v -> cycleDrivingMode());
+        }
+
+        // 3. SỰ KIỆN CLICK: Chuyển sang trang Service
         TextView navService = findViewById(R.id.nav_service);
         if (navService != null) {
             navService.setOnClickListener(v -> {
                 Intent intent = new Intent(MainActivity.this, ServiceActivity.class);
                 startActivity(intent);
-                overridePendingTransition(0, 0); // Tắt hiệu ứng trượt để chuyển tab mượt hơn
+                overridePendingTransition(0, 0); // Tắt hiệu ứng trượt
                 finish(); // Đóng trang hiện tại
             });
         }
@@ -67,5 +77,26 @@ public class MainActivity extends BaseActivity {
                 finish(); // Đóng trang hiện tại
             });
         }
+    }
+
+    // --- HÀM ĐỔI CHẾ ĐỘ LÁI ---
+    private void cycleDrivingMode() {
+        // Tăng index, nếu vượt quá số lượng chế độ thì quay lại 0
+        currentModeIndex = (currentModeIndex + 1) % drivingModes.length;
+        String newMode = drivingModes[currentModeIndex];
+
+        tvMode.setText(newMode);
+
+        // Đổi màu chữ tương ứng với chế độ lái
+        int colorResId;
+        if (newMode.equals("RACE") || newMode.equals("SPORT+")) {
+            colorResId = R.color.colorPrimary; // Màu đỏ/cam
+        } else if (newMode.equals("RAIN")) {
+            colorResId = R.color.status_blue; // Màu xanh dương
+        } else {
+            colorResId = R.color.status_green; // Màu xanh lá
+        }
+
+        tvMode.setTextColor(ContextCompat.getColor(this, colorResId));
     }
 }
