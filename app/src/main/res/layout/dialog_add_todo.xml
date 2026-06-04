@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/bg_card"
+    app:cardCornerRadius="20dp"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="1dp"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THÊM LỊCH TRÌNH"
+            android:textColor="@color/text_white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhập công việc tự bảo trì xe bạn cần lên kế hoạch thực hiện:"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/et_task_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_rounded_outline_orange"
+            android:hint="VD: Vệ sinh nhông sên, Thay bugi..."
+            android:textColorHint="#66FFFFFF"
+            android:textColor="@color/text_white"
+            android:paddingHorizontal="16dp"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:inputType="text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="end">
+
+            <TextView
+                android:id="@+id/btn_cancel_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HỦY BỎ"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/btn_save_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LƯU &amp; ĐẶT LỊCH"
+                android:textColor="@color/bg_main"
+                android:background="@color/text_white"
+                android:backgroundTint="@color/colorPrimary"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

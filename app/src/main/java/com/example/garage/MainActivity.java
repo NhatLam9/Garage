@@ -7,6 +7,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
+
 import java.util.Locale;
 
 public class MainActivity extends BaseActivity {
@@ -66,6 +67,7 @@ public class MainActivity extends BaseActivity {
             });
         }
 
+        // SỰ KIỆN CLICK: Chuyển sang trang Trips
         TextView navTrips = findViewById(R.id.nav_trips);
         if (navTrips != null) {
             navTrips.setOnClickListener(v -> {

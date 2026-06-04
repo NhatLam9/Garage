@@ -54,77 +54,127 @@
                         android:orientation="horizontal"
                         android:baselineAligned="false">
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
 
-                            <ProgressBar
-                                android:id="@+id/progress_coolant"
-                                style="?android:attr/progressBarStyleHorizontal"
+                            <RelativeLayout
                                 android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:layout_centerInParent="true"
-                                android:progressDrawable="@drawable/bg_circle_blue"
-                                android:max="100"
-                                android:progress="90" />
+                                android:layout_height="100dp">
+
+                                <ProgressBar
+                                    android:id="@+id/progress_coolant"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:progressDrawable="@drawable/bg_circle_blue"
+                                    android:max="100"
+                                    android:progress="0" />
+
+                                <TextView
+                                    android:id="@+id/tv_percent_coolant"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="--"
+                                    android:textColor="@color/text_white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+                            </RelativeLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:text="90%"
-                                android:textColor="@color/text_white"
-                                android:textSize="20sp"
-                                android:textStyle="bold"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/progress_coolant"
-                                android:layout_centerHorizontal="true"
-                                android:text="@string/service_coolant"
+                                android:text="NƯỚC LÀM MÁT"
                                 android:textColor="@color/status_blue"
                                 android:textSize="12sp"
                                 android:textStyle="bold"
                                 android:layout_marginTop="12dp"/>
-                        </RelativeLayout>
 
-                        <RelativeLayout
+                            <TextView
+                                android:id="@+id/btn_input_date_coolant"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📅 Chọn ngày thay"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp"
+                                android:layout_marginTop="4dp"
+                                android:padding="4dp"/>
+
+                            <TextView
+                                android:id="@+id/tv_predicted_mini_coolant"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dự kiến: --/--/----"
+                                android:textColor="@color/text_gray"
+                                android:textSize="10sp"
+                                android:visibility="gone"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1">
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
 
-                            <ProgressBar
-                                android:id="@+id/progress_oil"
-                                style="?android:attr/progressBarStyleHorizontal"
+                            <RelativeLayout
                                 android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:layout_centerInParent="true"
-                                android:progressDrawable="@drawable/bg_circle_yellow"
-                                android:max="100"
-                                android:progress="90" />
+                                android:layout_height="100dp">
+
+                                <ProgressBar
+                                    android:id="@+id/progress_oil"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:progressDrawable="@drawable/bg_circle_yellow"
+                                    android:max="100"
+                                    android:progress="0" />
+
+                                <TextView
+                                    android:id="@+id/tv_percent_oil"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="--"
+                                    android:textColor="@color/text_white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"/>
+                            </RelativeLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:text="90%"
-                                android:textColor="@color/text_white"
-                                android:textSize="20sp"
-                                android:textStyle="bold"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/progress_oil"
-                                android:layout_centerHorizontal="true"
-                                android:text="@string/service_oil_life"
+                                android:text="TUỔI THỌ NHỚT"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="12sp"
                                 android:textStyle="bold"
                                 android:layout_marginTop="12dp"/>
-                        </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/btn_input_date_oil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📅 Chọn ngày thay"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp"
+                                android:layout_marginTop="4dp"
+                                android:padding="4dp"/>
+
+                            <TextView
+                                android:id="@+id/tv_predicted_mini_oil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dự kiến: --/--/----"
+                                android:textColor="@color/text_gray"
+                                android:textSize="10sp"
+                                android:visibility="gone"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <View
@@ -132,12 +182,14 @@
                         android:layout_height="1dp"
                         android:background="@color/stroke_color"
                         android:layout_marginVertical="16dp"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="11dp"
                         android:text="@string/service_overall_temp"
                         android:textColor="@color/text_gray"
                         android:textSize="10sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -153,6 +205,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 android:layout_marginBottom="24dp">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -179,41 +232,77 @@
                             android:padding="12dp">
 
                             <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:text="@string/service_next_predict"
                                 android:textColor="#E6FFFFFF"
-                                android:textSize="12sp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+                                android:textSize="12sp" />
 
                             <TextView
-                                android:text="1 THG 6, 2026"
+                                android:id="@+id/tv_predicted_service_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CHƯA CÓ DỮ LIỆU"
                                 android:textColor="@color/text_white"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
                                 android:layout_marginVertical="4dp"/>
 
                             <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:text="~ 12,450 KM"
                                 android:textColor="#B3FFFFFF"
-                                android:textSize="12sp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
-                        </LinearLayout>
+                                android:textSize="12sp" />
 
+                            <TextView
+                                android:id="@+id/btn_add_to_calendar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🔔 Thêm nhắc nhở vào Lịch"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="8dp"
+                                android:paddingVertical="6dp"
+                                android:paddingHorizontal="12dp"
+                                android:background="@drawable/bg_rounded_outline_orange"
+                                android:visibility="gone"/>
+                        </LinearLayout>
                     </RelativeLayout>
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/service_critical_components"
-                android:textColor="@color/text_white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="12dp"/>
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_critical_components"
+                    android:textColor="@color/text_white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/btn_add_component_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="➕ Thêm lịch hẹn"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:padding="6dp"
+                    android:background="@drawable/bg_glass"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </RelativeLayout>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -230,23 +319,27 @@
                     android:orientation="horizontal"
                     android:padding="16dp"
                     android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/engine"
                         android:contentDescription="Icon"/>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp">
+
                         <TextView
                             android:text="@string/service_engine_diag"
                             android:textColor="@color/text_white"
                             android:textSize="14sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
                         <TextView
                             android:text="@string/service_engine_desc"
                             android:textColor="@color/text_gray"
@@ -254,6 +347,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
+
                     <TextView
                         android:text="@string/status_optimal"
                         android:textColor="@color/status_green"
@@ -265,12 +359,15 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_engine_oil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="12dp"
                 app:strokeColor="@color/stroke_color"
                 app:strokeWidth="1dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginBottom="12dp">
 
                 <LinearLayout
@@ -279,23 +376,27 @@
                     android:orientation="horizontal"
                     android:padding="16dp"
                     android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/oilpressure"
                         android:contentDescription="Icon"/>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp">
+
                         <TextView
                             android:text="@string/service_oil_pressure"
                             android:textColor="@color/text_white"
                             android:textSize="14sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
                         <TextView
                             android:text="@string/service_oil_desc"
                             android:textColor="@color/text_gray"
@@ -303,7 +404,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
+
                     <TextView
+                        android:id="@+id/tv_oil_status"
                         android:text="@string/status_perfect"
                         android:textColor="@color/status_green"
                         android:textSize="12sp"
@@ -314,12 +417,15 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_battery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="12dp"
                 app:strokeColor="@color/stroke_color"
                 app:strokeWidth="1dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginBottom="12dp">
 
                 <LinearLayout
@@ -328,31 +434,46 @@
                     android:orientation="horizontal"
                     android:padding="16dp"
                     android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/battery"
                         android:contentDescription="Icon"/>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp">
+
                         <TextView
                             android:text="@string/service_battery_health"
                             android:textColor="@color/text_white"
                             android:textSize="14sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
                         <TextView
                             android:text="@string/service_battery_desc"
                             android:textColor="@color/text_gray"
                             android:textSize="12sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/btn_input_date_battery"
+                            android:text="📅 Nhập ngày thay ắc quy"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"/>
                     </LinearLayout>
+
                     <TextView
+                        android:id="@+id/tv_battery_status"
                         android:text="@string/status_good"
                         android:textColor="@color/status_green"
                         android:textSize="12sp"
@@ -363,12 +484,15 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_brake_pads"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardBackgroundColor="@color/bg_card"
                 app:cardCornerRadius="12dp"
                 app:strokeColor="@color/stroke_color"
                 app:strokeWidth="1dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginBottom="12dp">
 
                 <LinearLayout
@@ -377,31 +501,46 @@
                     android:orientation="horizontal"
                     android:padding="16dp"
                     android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/abs"
                         android:contentDescription="Icon"/>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp">
+
                         <TextView
                             android:text="@string/service_abs"
                             android:textColor="@color/text_white"
                             android:textSize="14sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
                         <TextView
                             android:text="@string/service_abs_desc"
                             android:textColor="@color/text_gray"
                             android:textSize="12sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/btn_input_date_abs"
+                            android:text="📅 Nhập ngày thay dầu phanh"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"/>
                     </LinearLayout>
+
                     <TextView
+                        android:id="@+id/tv_brake_status"
                         android:text="@string/status_active"
                         android:textColor="@color/status_green"
                         android:textSize="12sp"
@@ -426,31 +565,46 @@
                     android:orientation="horizontal"
                     android:padding="16dp"
                     android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/tire"
                         android:contentDescription="Icon"/>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp">
+
                         <TextView
                             android:text="@string/service_tpms"
                             android:textColor="@color/text_white"
                             android:textSize="14sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
                         <TextView
                             android:text="@string/service_tpms_desc"
                             android:textColor="@color/text_gray"
                             android:textSize="12sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/btn_input_date_tires"
+                            android:text="📅 Nhập ngày thay lốp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"/>
                     </LinearLayout>
+
                     <TextView
+                        android:id="@+id/tv_tires_status"
                         android:text="@string/status_optimal"
                         android:textColor="@color/status_green"
                         android:textSize="12sp"
@@ -475,23 +629,27 @@
                     android:orientation="horizontal"
                     android:padding="16dp"
                     android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/temperaturecoolant"
                         android:contentDescription="Icon"/>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp">
+
                         <TextView
                             android:text="@string/service_cooling"
                             android:textColor="@color/text_white"
                             android:textSize="14sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
                         <TextView
                             android:text="@string/service_cooling_desc"
                             android:textColor="@color/text_gray"
@@ -499,7 +657,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
+
                     <TextView
+                        android:id="@+id/tv_coolant_status"
                         android:text="@string/status_stable"
                         android:textColor="@color/status_green"
                         android:textSize="12sp"
@@ -518,7 +678,8 @@
                 app:strokeWidth="1dp"
                 android:layout_marginBottom="12dp">
 
-                <LinearLayout android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:padding="16dp"
@@ -529,18 +690,21 @@
                         android:layout_height="40dp"
                         android:src="@drawable/tractioncontroll"
                         android:contentDescription="Icon"/>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp">
+
                         <TextView
                             android:text="@string/service_tc"
                             android:textColor="@color/text_white"
                             android:textSize="14sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
                         <TextView
                             android:text="@string/service_tc_desc"
                             android:textColor="@color/text_gray"
@@ -548,6 +712,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
+
                     <TextView
                         android:text="@string/status_ready"
                         android:textColor="@color/status_green"
@@ -573,31 +738,46 @@
                     android:orientation="horizontal"
                     android:padding="16dp"
                     android:gravity="center_vertical">
+
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:src="@drawable/airfilter"
                         android:contentDescription="Icon"/>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp">
+
                         <TextView
                             android:text="@string/service_air_intake"
                             android:textColor="@color/text_white"
                             android:textSize="14sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
                         <TextView
                             android:text="@string/service_air_intake_desc"
                             android:textColor="@color/text_gray"
                             android:textSize="12sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/btn_input_date_filter"
+                            android:text="📅 Nhập ngày thay lọc gió"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="11sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"/>
                     </LinearLayout>
+
                     <TextView
+                        android:id="@+id/tv_filter_status"
                         android:text="@string/status_clean"
                         android:textColor="@color/status_green"
                         android:textSize="12sp"
@@ -607,14 +787,9 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/bg_card"
-                app:cardCornerRadius="12dp"
-                app:strokeColor="@color/stroke_color"
-                app:strokeWidth="1dp"
-                android:layout_marginBottom="32dp"/>
+                android:layout_height="32dp" />
 
         </LinearLayout>
     </ScrollView>

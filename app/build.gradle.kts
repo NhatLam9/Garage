@@ -45,4 +45,5 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation("org.osmdroid:osmdroid-android:6.1.18")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 }

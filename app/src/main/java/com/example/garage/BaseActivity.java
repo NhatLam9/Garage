@@ -2,13 +2,14 @@ package com.example.garage;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
 
 public abstract class BaseActivity extends AppCompatActivity {
+
     protected void setupCommonUI(int currentMenuId) {
         // 1. Cài đặt nút chuyển ngôn ngữ
         TextView btnLanguage = findViewById(R.id.btn_language);

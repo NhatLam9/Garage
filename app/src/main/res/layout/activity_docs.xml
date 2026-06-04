@@ -219,370 +219,79 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="310dp"
-                        android:layout_height="wrap_content"
-                        app:cardBackgroundColor="@color/bg_card"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/stroke_color"
-                        app:strokeWidth="1dp"
-                        android:layout_marginEnd="16dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_sys_focus"
-                                android:textColor="@color/status_blue"
-                                android:textSize="10sp"
-                                android:textStyle="bold"
-                                android:background="#1A00BFFF"
-                                android:paddingHorizontal="6dp"
-                                android:paddingVertical="2dp"
-                                android:layout_marginBottom="8dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_dohc_title"
-                                android:textColor="@color/text_white"
-                                android:textSize="22sp"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="4dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_dohc_desc"
-                                android:textColor="@color/text_gray"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="16dp"/>
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="280dp">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/dohc"/>
+                    <com.google.android.material.card.MaterialCardView android:layout_width="310dp" android:layout_height="wrap_content" app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:strokeColor="@color/stroke_color" app:strokeWidth="1dp" android:layout_marginEnd="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_sys_focus" android:textColor="@color/status_blue" android:textSize="10sp" android:textStyle="bold" android:background="#1A00BFFF" android:paddingHorizontal="6dp" android:paddingVertical="2dp" android:layout_marginBottom="8dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_dohc_title" android:textColor="@color/text_white" android:textSize="22sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_dohc_desc" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_marginBottom="16dp"/>
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="280dp">
+                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/dohc"/>
                             </RelativeLayout>
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="310dp"
-                        android:layout_height="match_parent"
-                        app:cardBackgroundColor="@color/bg_card"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/stroke_color"
-                        app:strokeWidth="1dp"
-                        android:layout_marginEnd="16dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_tire_label"
-                                android:textColor="@color/status_green"
-                                android:textSize="10sp"
-                                android:textStyle="bold"
-                                android:background="#1A00FF00"
-                                android:paddingHorizontal="6dp"
-                                android:paddingVertical="2dp"
-                                android:layout_marginBottom="8dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_tire_title"
-                                android:textColor="@color/text_white"
-                                android:textSize="22sp"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="4dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_tire_desc"
-                                android:textColor="@color/text_gray"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="16dp"/>
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="280dp">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/pireli"/>
+                    <com.google.android.material.card.MaterialCardView android:layout_width="310dp" android:layout_height="match_parent" app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:strokeColor="@color/stroke_color" app:strokeWidth="1dp" android:layout_marginEnd="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_tire_label" android:textColor="@color/status_green" android:textSize="10sp" android:textStyle="bold" android:background="#1A00FF00" android:paddingHorizontal="6dp" android:paddingVertical="2dp" android:layout_marginBottom="8dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_tire_title" android:textColor="@color/text_white" android:textSize="22sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_tire_desc" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_marginBottom="16dp"/>
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="280dp">
+                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:src="@drawable/pireli"/>
                             </RelativeLayout>
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="310dp"
-                        android:layout_height="match_parent"
-                        app:cardBackgroundColor="@color/bg_card"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/stroke_color"
-                        app:strokeWidth="1dp"
-                        android:layout_marginEnd="16dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_oil_label"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="10sp"
-                                android:textStyle="bold"
-                                android:background="#1AFFFF00"
-                                android:paddingHorizontal="6dp"
-                                android:paddingVertical="2dp"
-                                android:layout_marginBottom="8dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_oil_title"
-                                android:textColor="@color/text_white"
-                                android:textSize="22sp"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="4dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_oil_desc"
-                                android:textColor="@color/text_gray"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="16dp"/>
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="280dp">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/motul"/>
+                    <com.google.android.material.card.MaterialCardView android:layout_width="310dp" android:layout_height="match_parent" app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:strokeColor="@color/stroke_color" app:strokeWidth="1dp" android:layout_marginEnd="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_oil_label" android:textColor="@color/colorPrimary" android:textSize="10sp" android:textStyle="bold" android:background="#1AFFFF00" android:paddingHorizontal="6dp" android:paddingVertical="2dp" android:layout_marginBottom="8dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_oil_title" android:textColor="@color/text_white" android:textSize="22sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_oil_desc" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_marginBottom="16dp"/>
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="280dp">
+                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:src="@drawable/motul"/>
                             </RelativeLayout>
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="310dp"
-                        android:layout_height="match_parent"
-                        app:cardBackgroundColor="@color/bg_card"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/stroke_color"
-                        app:strokeWidth="1dp"
-                        android:layout_marginEnd="16dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_air_label"
-                                android:textColor="#00FFFF"
-                                android:textSize="10sp"
-                                android:textStyle="bold"
-                                android:background="#1A00FFFF"
-                                android:paddingHorizontal="6dp"
-                                android:paddingVertical="2dp"
-                                android:layout_marginBottom="8dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_air_title"
-                                android:textColor="@color/text_white"
-                                android:textSize="22sp"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="4dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_air_desc"
-                                android:textColor="@color/text_gray"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="16dp"/>
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="280dp">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/air"/>
+                    <com.google.android.material.card.MaterialCardView android:layout_width="310dp" android:layout_height="match_parent" app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:strokeColor="@color/stroke_color" app:strokeWidth="1dp" android:layout_marginEnd="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_air_label" android:textColor="#00FFFF" android:textSize="10sp" android:textStyle="bold" android:background="#1A00FFFF" android:paddingHorizontal="6dp" android:paddingVertical="2dp" android:layout_marginBottom="8dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_air_title" android:textColor="@color/text_white" android:textSize="22sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_air_desc" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_marginBottom="16dp"/>
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="280dp">
+                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:src="@drawable/air"/>
                             </RelativeLayout>
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="310dp"
-                        android:layout_height="match_parent"
-                        app:cardBackgroundColor="@color/bg_card"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/stroke_color"
-                        app:strokeWidth="1dp"
-                        android:layout_marginEnd="16dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_brake_label"
-                                android:textColor="#FF5252"
-                                android:textSize="10sp"
-                                android:textStyle="bold"
-                                android:background="#1AFF0000"
-                                android:paddingHorizontal="6dp"
-                                android:paddingVertical="2dp"
-                                android:layout_marginBottom="8dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_brake_title"
-                                android:textColor="@color/text_white"
-                                android:textSize="22sp"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="4dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_brake_desc"
-                                android:textColor="@color/text_gray"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="16dp"/>
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="280dp">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/brembo"/>
+                    <com.google.android.material.card.MaterialCardView android:layout_width="310dp" android:layout_height="match_parent" app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:strokeColor="@color/stroke_color" app:strokeWidth="1dp" android:layout_marginEnd="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_brake_label" android:textColor="#FF5252" android:textSize="10sp" android:textStyle="bold" android:background="#1AFF0000" android:paddingHorizontal="6dp" android:paddingVertical="2dp" android:layout_marginBottom="8dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_brake_title" android:textColor="@color/text_white" android:textSize="22sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_brake_desc" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_marginBottom="16dp"/>
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="280dp">
+                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:src="@drawable/brembo"/>
                             </RelativeLayout>
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="310dp"
-                        android:layout_height="match_parent"
-                        app:cardBackgroundColor="@color/bg_card"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/stroke_color"
-                        app:strokeWidth="1dp"
-                        android:layout_marginEnd="16dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_spark_label"
-                                android:textColor="#E040FB"
-                                android:textSize="10sp"
-                                android:textStyle="bold"
-                                android:background="#1AAA00FF"
-                                android:paddingHorizontal="6dp"
-                                android:paddingVertical="2dp"
-                                android:layout_marginBottom="8dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_spark_title"
-                                android:textColor="@color/text_white"
-                                android:textSize="22sp"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="4dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_spark_desc"
-                                android:textColor="@color/text_gray"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="16dp"/>
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="280dp">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/bugi"/>
+                    <com.google.android.material.card.MaterialCardView android:layout_width="310dp" android:layout_height="match_parent" app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:strokeColor="@color/stroke_color" app:strokeWidth="1dp" android:layout_marginEnd="16dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_spark_label" android:textColor="#E040FB" android:textSize="10sp" android:textStyle="bold" android:background="#1AAA00FF" android:paddingHorizontal="6dp" android:paddingVertical="2dp" android:layout_marginBottom="8dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_spark_title" android:textColor="@color/text_white" android:textSize="22sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_spark_desc" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_marginBottom="16dp"/>
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="280dp">
+                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:src="@drawable/bugi"/>
                             </RelativeLayout>
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="310dp"
-                        android:layout_height="match_parent"
-                        app:cardBackgroundColor="@color/bg_card"
-                        app:cardCornerRadius="16dp"
-                        app:strokeColor="@color/stroke_color"
-                        app:strokeWidth="1dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_coolant_label"
-                                android:textColor="#00BFFF"
-                                android:textSize="10sp"
-                                android:textStyle="bold"
-                                android:background="#1A00BFFF"
-                                android:paddingHorizontal="6dp"
-                                android:paddingVertical="2dp"
-                                android:layout_marginBottom="8dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_coolant_title"
-                                android:textColor="@color/text_white"
-                                android:textSize="22sp"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="4dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/docs_rec_coolant_desc"
-                                android:textColor="@color/text_gray"
-                                android:textSize="12sp"
-                                android:layout_marginBottom="16dp"/>
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="280dp">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="fitCenter"
-                                    android:src="@drawable/engineice"/>
+                    <com.google.android.material.card.MaterialCardView android:layout_width="310dp" android:layout_height="match_parent" app:cardBackgroundColor="@color/bg_card" app:cardCornerRadius="16dp" app:strokeColor="@color/stroke_color" app:strokeWidth="1dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_coolant_label" android:textColor="#00BFFF" android:textSize="10sp" android:textStyle="bold" android:background="#1A00BFFF" android:paddingHorizontal="6dp" android:paddingVertical="2dp" android:layout_marginBottom="8dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_coolant_title" android:textColor="@color/text_white" android:textSize="22sp" android:textStyle="bold" android:layout_marginBottom="4dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/docs_rec_coolant_desc" android:textColor="@color/text_gray" android:textSize="12sp" android:layout_marginBottom="16dp"/>
+                            <RelativeLayout android:layout_width="match_parent" android:layout_height="280dp">
+                                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:src="@drawable/engineice"/>
                             </RelativeLayout>
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
@@ -601,202 +310,41 @@
                     android:textColor="@color/text_white"
                     android:textSize="24sp"
                     android:textStyle="bold"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/view_all_logs"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"/>
             </RelativeLayout>
 
-            <com.google.android.material.card.MaterialCardView
+            <TextView
+                android:id="@+id/tv_empty_state"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                app:cardBackgroundColor="@color/bg_card"
-                app:cardCornerRadius="12dp"
-                app:strokeColor="@color/stroke_color"
-                app:strokeWidth="1dp"
-                android:layout_marginBottom="12dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/oilcharge"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/log_completed"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="10sp"
-                                android:textStyle="bold"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="24 THG 5, 2026"
-                                android:textColor="@color/text_gray"
-                                android:textSize="10sp"
-                                android:layout_alignParentEnd="true"/>
-                        </RelativeLayout>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/log_oil_title"
-                            android:textColor="@color/text_white"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:layout_marginTop="4dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/log_oil_desc"
-                            android:textColor="@color/text_gray"
-                            android:textSize="12sp"
-                            android:maxLines="1"
-                            android:ellipsize="end"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Chưa có lịch trình cá nhân nào.\nẤn nút [+] màu cam để thêm việc!"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                android:layout_marginVertical="32dp"
+                android:visibility="gone"/>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_todo_list"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                app:cardBackgroundColor="@color/bg_card"
-                app:cardCornerRadius="12dp"
-                app:strokeColor="@color/stroke_color"
-                app:strokeWidth="1dp"
-                android:layout_marginBottom="12dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/engineice"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/log_completed"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="10sp"
-                                android:textStyle="bold"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="24 THG 2, 2026"
-                                android:textColor="@color/text_gray"
-                                android:textSize="10sp"
-                                android:layout_alignParentEnd="true"/>
-                        </RelativeLayout>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/log_coolant_title"
-                            android:textColor="@color/text_white"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:layout_marginTop="4dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/log_coolant_desc"
-                            android:textColor="@color/text_gray"
-                            android:textSize="12sp"
-                            android:maxLines="1"
-                            android:ellipsize="end"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                app:cardBackgroundColor="@color/bg_card"
-                app:cardCornerRadius="12dp"
-                app:strokeColor="@color/stroke_color"
-                app:strokeWidth="1dp"
-                android:layout_marginBottom="12dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/brembo"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/log_completed"
-                                android:textColor="@color/colorPrimary"
-                                android:textSize="10sp"
-                                android:textStyle="bold"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="20 THG 1, 2026"
-                                android:textColor="@color/text_gray"
-                                android:textSize="10sp"
-                                android:layout_alignParentEnd="true"/>
-                        </RelativeLayout>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/log_brake_title"
-                            android:textColor="@color/text_white"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:layout_marginTop="4dp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/log_brake_desc"
-                            android:textColor="@color/text_gray"
-                            android:textSize="12sp"
-                            android:maxLines="1"
-                            android:ellipsize="end"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="80dp"/>
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginBottom="80dp"/>
 
         </LinearLayout>
     </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_doc_todo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/colorPrimary"
+        app:tint="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Thêm Lịch Trình" />
 
     <include
         android:id="@+id/bottom_nav"
