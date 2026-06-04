@@ -66,17 +66,6 @@ public class MainActivity extends BaseActivity {
                 finish(); // Đóng trang hiện tại
             });
         }
-
-        // SỰ KIỆN CLICK: Chuyển sang trang Trips
-        TextView navTrips = findViewById(R.id.nav_trips);
-        if (navTrips != null) {
-            navTrips.setOnClickListener(v -> {
-                Intent intent = new Intent(MainActivity.this, TripsActivity.class);
-                startActivity(intent);
-                overridePendingTransition(0, 0); // Tắt hiệu ứng trượt
-                finish(); // Đóng trang hiện tại
-            });
-        }
     }
 
     // --- HÀM ĐỔI CHẾ ĐỘ LÁI ---

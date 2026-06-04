@@ -3,12 +3,14 @@ package com.example.garage;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +18,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -59,6 +65,9 @@ public class DocsActivity extends BaseActivity implements TodoAdapter.OnTodoActi
 
         refreshTodoList();
 
+        // Gọi hàm setup logic giao diện mới (Maps, Banner, Lưới phụ tùng)
+        setupNewLogic();
+
         // ==============================================================
         // BẮT LỆNH TỪ SERVICEACTIVITY TRUYỀN SANG
         // ==============================================================
@@ -86,11 +95,88 @@ public class DocsActivity extends BaseActivity implements TodoAdapter.OnTodoActi
             }
         }
 
+        // Bắt sự kiện của nút + do bạn code ban đầu
         if (fabAdd != null) {
             fabAdd.setOnClickListener(v -> showNewTaskInputDialog());
         }
     }
 
+    // ==============================================================
+    // KHỐI LOGIC MỚI: BẢN ĐỒ, QUẢNG CÁO, TRA CỨU PHỤ TÙNG
+    // ==============================================================
+    private void setupNewLogic() {
+        // 1. NÚT MAPS THU NHỎ - TÌM TIỆM SỬA XE
+        MaterialButton btnMapGarage = findViewById(R.id.btn_map_garage);
+        if (btnMapGarage != null) {
+            btnMapGarage.setOnClickListener(v -> openGoogleMaps("Tiệm sửa chữa xe máy gần đây"));
+        }
+
+        // 2. CÁC NÚT TÌM MUA TRÊN BANNER
+        Button btnBuyMotul = findViewById(R.id.btn_buy_motul);
+        Button btnBuyPirelli = findViewById(R.id.btn_buy_pirelli);
+        Button btnBuyBrembo = findViewById(R.id.btn_buy_brembo);
+
+        if (btnBuyMotul != null) btnBuyMotul.setOnClickListener(v -> searchGoogleWeb("mua Nhớt Motul 300V chính hãng"));
+        if (btnBuyPirelli != null) btnBuyPirelli.setOnClickListener(v -> searchGoogleWeb("mua Lốp Pirelli Rosso chính hãng"));
+        if (btnBuyBrembo != null) btnBuyBrembo.setOnClickListener(v -> searchGoogleWeb("mua Má phanh Brembo chính hãng"));
+
+        // 3. LƯỚI DANH MỤC - GỌI ACTIVITY BẰNG CỜ HIỆU
+        MaterialCardView btnOil = findViewById(R.id.btn_product_oil);
+        MaterialCardView btnCoolant = findViewById(R.id.btn_product_coolant);
+        MaterialCardView btnBrakePad = findViewById(R.id.btn_product_brake_pad);
+        MaterialCardView btnBrakeFluid = findViewById(R.id.btn_product_brake_fluid);
+        MaterialCardView btnOilFilter = findViewById(R.id.btn_product_oil_filter);
+        MaterialCardView btnAirFilter = findViewById(R.id.btn_product_air_filter);
+
+        if (btnOil != null) btnOil.setOnClickListener(v -> launchProductActivity("OIL"));
+        if (btnCoolant != null) btnCoolant.setOnClickListener(v -> launchProductActivity("COOLANT"));
+        if (btnBrakePad != null) btnBrakePad.setOnClickListener(v -> launchProductActivity("BRAKE"));
+        if (btnBrakeFluid != null) btnBrakeFluid.setOnClickListener(v -> launchProductActivity("BRAKE_FLUID"));
+        if (btnOilFilter != null) btnOilFilter.setOnClickListener(v -> launchProductActivity("OIL_FILTER"));
+        if (btnAirFilter != null) btnAirFilter.setOnClickListener(v -> launchProductActivity("AIR_FILTER"));
+    }
+
+    private void launchProductActivity(String categoryType) {
+        Intent intent = new Intent(DocsActivity.this, ProductListActivity.class);
+        intent.putExtra("CATEGORY_TYPE", categoryType);
+        startActivity(intent);
+        overridePendingTransition(0, 0);
+    }
+
+    private void searchGoogleWeb(String query) {
+        try {
+            String url = "https://www.google.com/search?q=" + Uri.encode(query);
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "Không thể mở Trình duyệt Web!", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
+    }
+
+    private void openGoogleMaps(String searchQuery) {
+        try {
+            String uriString = "geo:0,0?q=" + Uri.encode(searchQuery);
+            Uri gmmIntentUri = Uri.parse(uriString);
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+
+            // Xóa comment dòng dưới nếu cắm máy thật
+            // mapIntent.setPackage("com.google.android.apps.maps");
+
+            if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                startActivity(mapIntent);
+            } else {
+                searchGoogleWeb(searchQuery);
+            }
+        } catch (Exception e) {
+            Toast.makeText(this, "Không thể mở bản đồ!", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
+    }
+
+    // ==============================================================
+    // CÁC HÀM CŨ CỦA BẠN (GIỮ NGUYÊN 100%)
+    // ==============================================================
     private void setupBottomNavigation() {
         TextView navDashboard = findViewById(R.id.nav_dashboard);
         if (navDashboard != null) {
@@ -105,15 +191,6 @@ public class DocsActivity extends BaseActivity implements TodoAdapter.OnTodoActi
         if (navService != null) {
             navService.setOnClickListener(v -> {
                 startActivity(new Intent(DocsActivity.this, ServiceActivity.class));
-                overridePendingTransition(0, 0);
-                finish();
-            });
-        }
-
-        TextView navTrips = findViewById(R.id.nav_trips);
-        if (navTrips != null) {
-            navTrips.setOnClickListener(v -> {
-                startActivity(new Intent(DocsActivity.this, TripsActivity.class));
                 overridePendingTransition(0, 0);
                 finish();
             });

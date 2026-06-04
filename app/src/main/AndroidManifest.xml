@@ -41,7 +41,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".TripsActivity"
+            android:name=".ProductListActivity"
             android:exported="false" />
 
         <activity

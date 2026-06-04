@@ -161,21 +161,19 @@ public class ServiceActivity extends BaseActivity {
     // ==========================================
     // HÀM XỬ LÝ ĐỒNG BỘ: Tính % -> Đổi Vòng Tròn -> Đổi Màu Chữ
     // ==========================================
-    private void processComponentLife(Date selectedDate, int maxLifespanDays, TextView tvDateBtn, String datePrefix, TextView tvStatusLabel, ProgressBar topProgress, TextView topPercent) {
-
+    private void processComponentLife(Date selectedDate, int maxLifespanDays, TextView tvDateBtn,
+                                      String datePrefix, TextView tvStatusLabel, ProgressBar topProgress,
+                                      TextView topPercent) {
         // 1. Ghi ngày hiển thị
         if (tvDateBtn != null) {
             tvDateBtn.setText(datePrefix + dateFormat.format(selectedDate));
         }
-
         // 2. Tính % còn lại
         int percent = calculateLifePercentage(selectedDate, maxLifespanDays);
-
         // 3. Nếu linh kiện này CÓ vòng tròn ở trên (Nhớt, Nước mát) -> Kích hoạt Animation vòng tròn
         if (topProgress != null && topPercent != null) {
             animateProgressBar(topProgress, topPercent, percent);
         }
-
         // 4. Nếu linh kiện này CÓ thẻ trạng thái -> Đổi màu chữ theo %
         if (tvStatusLabel != null) {
             if (percent > 60) {
@@ -211,16 +209,16 @@ public class ServiceActivity extends BaseActivity {
     }
 
     // ==========================================
-    // CÁC HÀM XỬ LÝ LỊCH VÀ CHUYỂN TRANG (GIỮ NGUYÊN HOẠT ĐỘNG HOÀN HẢO)
+    // CÁC HÀM XỬ LÝ LỊCH VÀ CHUYỂN TRANG
     // ==========================================
 
     private void showComponentScheduleMenu(View anchorView) {
         PopupMenu popup = new PopupMenu(this, anchorView);
-        popup.getMenu().add(0, 1, 0, "🛢️ Nhớt động cơ");
-        popup.getMenu().add(0, 2, 1, "🔋 Bình ắc quy");
-        popup.getMenu().add(0, 3, 2, "⚙️ Phanh ABS");
-        popup.getMenu().add(0, 4, 3, "🌀 Lọc gió động cơ");
-        popup.getMenu().add(0, 5, 4, "❌ Lốp xe (Trọn bộ)");
+        popup.getMenu().add(0, 1, 0, "Nhớt động cơ");
+        popup.getMenu().add(0, 2, 1, "Bình ắc quy");
+        popup.getMenu().add(0, 3, 2, "Phanh");
+        popup.getMenu().add(0, 4, 3, "Lọc gió động cơ");
+        popup.getMenu().add(0, 5, 4, "Lốp xe (Trọn bộ)");
 
         popup.setOnMenuItemClickListener(item -> {
             String selectedPart = item.getTitle().toString().replaceAll("[\\uD83D\\uDCE6\\uD83D\\uDFE2\\uD83D\\uDD34\\uD83D\\uDEE2\\uD83D\\uDD0B\\u2699\\uD83C\\uDF00\\u274C\\uFE0F ]", "");
@@ -233,7 +231,7 @@ public class ServiceActivity extends BaseActivity {
     private void triggerDirectScheduleWorkflow(String componentName) {
         Intent intent = new Intent(ServiceActivity.this, DocsActivity.class);
         intent.putExtra("SUGGESTED_PART", componentName);
-        intent.putExtra("AUTO_ADD_TODO", "📅 Kế hoạch: Bảo dưỡng " + componentName);
+        intent.putExtra("AUTO_ADD_TODO", "Kế hoạch: Bảo dưỡng " + componentName);
         intent.putExtra("OPEN_CALENDAR_AUTO", componentName);
         startActivity(intent);
         overridePendingTransition(0, 0);
@@ -279,14 +277,16 @@ public class ServiceActivity extends BaseActivity {
 
     private void showStatusSelectionMenu(View anchorView, String componentName, TextView tvStatus) {
         PopupMenu popup = new PopupMenu(this, anchorView);
-        popup.getMenu().add(0, 1, 0, "🟢 Trạng thái: GOOD (Bình thường)");
+        popup.getMenu().add(0, 1, 0, "Trạng thái: GOOD (Bình thường)");
         popup.getMenu().add(0, 2, 1, "🔴 Trạng thái: BAD (Cần thay thế)");
         popup.setOnMenuItemClickListener(item -> {
             if (item.getItemId() == 1) {
-                if (tvStatus != null) { tvStatus.setText("GOOD"); tvStatus.setTextColor(Color.parseColor("#00FF00")); }
+                if (tvStatus != null) { tvStatus.setText("GOOD");
+                    tvStatus.setTextColor(Color.parseColor("#00FF00")); }
                 return true;
             } else if (item.getItemId() == 2) {
-                if (tvStatus != null) { tvStatus.setText("BAD"); tvStatus.setTextColor(Color.parseColor("#FF5252")); }
+                if (tvStatus != null) { tvStatus.setText("BAD");
+                    tvStatus.setTextColor(Color.parseColor("#FF5252")); }
                 triggerMaintenanceAlert(componentName);
                 return true;
             }
@@ -311,7 +311,7 @@ public class ServiceActivity extends BaseActivity {
                 alertDialog.dismiss();
                 Intent intent = new Intent(ServiceActivity.this, DocsActivity.class);
                 intent.putExtra("SUGGESTED_PART", componentName);
-                intent.putExtra("AUTO_ADD_TODO", "⚠️ KHẨN CẤP: Kiểm tra và thay thế " + componentName);
+                intent.putExtra("AUTO_ADD_TODO", "KHẨN CẤP: Kiểm tra và thay thế " + componentName);
                 intent.putExtra("OPEN_CALENDAR_AUTO", componentName);
                 startActivity(intent);
                 overridePendingTransition(0, 0);

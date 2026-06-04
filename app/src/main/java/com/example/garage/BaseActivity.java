@@ -29,7 +29,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         setupNavButton(R.id.nav_dashboard, MainActivity.class, currentMenuId);
         setupNavButton(R.id.nav_service, ServiceActivity.class, currentMenuId);
         setupNavButton(R.id.nav_docs, DocsActivity.class, currentMenuId);
-        setupNavButton(R.id.nav_trips, TripsActivity.class, currentMenuId);
     }
 
     private void setupNavButton(int buttonId, Class<?> targetActivity, int currentMenuId) {
