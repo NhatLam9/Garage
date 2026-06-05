@@ -87,7 +87,6 @@ public class ServiceActivity extends BaseActivity {
 
         // --- 2. SỰ KIỆN CHỌN NGÀY VÀ ĐỒNG BỘ TOÀN HỆ THỐNG ---
         // Giả định tuổi thọ (Số ngày): Nhớt 180đ, Nước mát 365đ, Dầu phanh 365đ, Ắc quy 730đ, Lốp 730đ, Lọc gió 180đ.
-
         if (btnDateOil != null) {
             btnDateOil.setOnClickListener(v -> showDatePicker(date -> {
                 // Tính % và Cập nhật Vòng tròn + Thẻ nhỏ
@@ -158,9 +157,7 @@ public class ServiceActivity extends BaseActivity {
         if (cardBattery != null) cardBattery.setOnClickListener(v -> showStatusSelectionMenu(v, "Ắc quy", tvBatteryStatus));
     }
 
-    // ==========================================
     // HÀM XỬ LÝ ĐỒNG BỘ: Tính % -> Đổi Vòng Tròn -> Đổi Màu Chữ
-    // ==========================================
     private void processComponentLife(Date selectedDate, int maxLifespanDays, TextView tvDateBtn,
                                       String datePrefix, TextView tvStatusLabel, ProgressBar topProgress,
                                       TextView topPercent) {
